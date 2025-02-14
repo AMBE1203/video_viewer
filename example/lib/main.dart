@@ -64,7 +64,7 @@ class SerieSource {
 class CustomVideoViewerStyle extends VideoViewerStyle {
   CustomVideoViewerStyle({required Movie movie, required BuildContext context})
       : super(
-          textStyle: context.textTheme.subtitle1,
+          textStyle: context.textTheme.titleMedium,
           playAndPauseStyle:
               PlayAndPauseWidgetStyle(background: context.color.primary),
           progressBarStyle: ProgressBarStyle(
@@ -75,7 +75,7 @@ class CustomVideoViewerStyle extends VideoViewerStyle {
             padding: kAllPadding,
             child: Headline6(
               movie.title,
-              style: TextStyle(color: context.textTheme.headline4?.color),
+              style: TextStyle(color: context.textTheme.headlineMedium?.color),
             ),
           ),
           thumbnail: Stack(children: [
@@ -189,36 +189,36 @@ class App extends StatelessWidget {
         primaryColor: Color(0xFFd81e27),
         shadowColor: Color(0xFF324754).withOpacity(0.24),
         textTheme: TextTheme(
-          headline4: GoogleFonts.montserrat(
+          headlineMedium: GoogleFonts.montserrat(
             color: Colors.white,
             fontSize: 34,
             fontWeight: FontWeight.bold,
             letterSpacing: 0.4,
           ),
-          headline5: GoogleFonts.montserrat(
+          headlineSmall: GoogleFonts.montserrat(
             color: Color(0xFF324754),
             fontSize: 24,
             fontWeight: FontWeight.w500,
           ),
-          headline6: GoogleFonts.montserrat(
+          titleLarge: GoogleFonts.montserrat(
             color: Color(0xFF324754),
             fontSize: 20,
             fontWeight: FontWeight.w500,
           ),
-          bodyText1: GoogleFonts.montserrat(
+          bodyLarge: GoogleFonts.montserrat(
             color: Color(0xFF324754),
             fontWeight: FontWeight.w500,
             fontSize: 16,
           ),
-          subtitle1: GoogleFonts.montserrat(
+          titleMedium: GoogleFonts.montserrat(
             color: Colors.white,
             fontSize: 12,
           ),
-          subtitle2: GoogleFonts.montserrat(
+          titleSmall: GoogleFonts.montserrat(
             color: Color(0xFF819ab1),
             fontSize: 12,
           ),
-          button: GoogleFonts.montserrat(
+          labelLarge: GoogleFonts.montserrat(
             color: Colors.white,
             letterSpacing: 0.8,
             fontSize: 14,
@@ -560,7 +560,7 @@ class _SerieChatState extends State<SerieChat> {
         itemBuilder: (_, int index) {
           return Text(
             "x$index ${_texts[index]}",
-            style: context.textTheme.subtitle1,
+            style: context.textTheme.titleMedium,
           );
         },
       ),
@@ -816,7 +816,7 @@ class MovieTitle extends StatelessWidget {
     TextStyle? style;
 
     if (type == MovieStyle.page) {
-      style = TextStyle(color: context.textTheme.bodyText1?.color);
+      style = TextStyle(color: context.textTheme.bodyLarge?.color);
     }
 
     return Hero(
@@ -875,7 +875,7 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle? subtitle2 = context.textTheme.subtitle2;
+    final TextStyle? subtitle2 = context.textTheme.titleSmall;
     return CustomContainer(
       child: Row(children: [
         Padding(
