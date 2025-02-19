@@ -11,7 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
   gesture_x_detector: ^1.0.0
-  helpers: ^1.1.4
+
+  helpers:
+    git:
+      url: https://github.com/AMBE1203/helpers.git
   http: ^1.3.0
   path_provider: ^2.0.6
   provider: ^6.0.1

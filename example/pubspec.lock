@@ -147,11 +147,12 @@ packages:
   helpers:
     dependency: "direct main"
     description:
-      name: helpers
-      sha256: "46d41f7ad9580bfb792da9ecada090af956c7fc4bbc23a5c59d1fa779df74fa7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.4"
+      path: "."
+      ref: HEAD
+      resolved-ref: "91e82e887a668110c528ec85e035a2cfe068f4cb"
+      url: "https://github.com/AMBE1203/helpers.git"
+    source: git
+    version: "1.2.0"
   html:
     dependency: transitive
     description:
